@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Video | Smart Parking</title>
+  <style>
+body {
+  color: rgb(0, 0, 0);
+  background-image: url("../static/images/wallpaper 2.jpeg");
+  margin: 0px;
+  padding: 0px;
+  background-size: cover; /* Mengatur gambar agar menutupi seluruh latar belakang */
+  background-repeat: no-repeat;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+    header.feature-box.top {
+      height: 50px;
+      font-style: italic;
+      text-decoration: underline;
+      color: white;
+      text-align: center;
+    }
+
+    header.feature-box.second {
+      color: white;
+      font-style: italic;
+      text-decoration: underline;
+      height: 50px;
+      text-align: center;
+      margin-top: -25px;
+      margin-bottom: 10px;
+    }
+
+    .features {
+      background-color: black;
+      width: 900px;
+      height: 700px;
+      border-radius: 35px;
+      object-fit: contain;
+      margin: 20px;
+    }
+
+    section.col-sm {
+      background-color: black;
+      width: 1000px;
+      height: 650px;
+      border-radius: 35px;
+      object-fit: contain;
+      margin: 40px;
+    }
+
+    img {
+      width: 900px;
+      height: 600px;
+      border-radius: 35px;
+      object-fit: contain;
+      margin: 40px;
+    }
+
+    .new {
+      color: black;
+      margin: 0px;
+      padding: 10px;
+      background-color: rgb(14, 159, 216);
+      margin: 0px;
+      margin-top: -10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="feature-box top">
+    <h1><strong>Parking Slot Detection</strong></h1>
+  </header>
+  <header class="feature-box second">
+    <h1><strong>Output</strong></h1>
+  </header>
+  <section>
+    <div class="new">
+      <form method='POST' enctype="multipart/form-data"
+        style="align-content: center; text-align: center;display: flex;">
+        {{form.hidden_tag()}}
+        {{form.file(class_="custom-file-input")}}
+
+        <div>
+          <button type="submit" name="favorite" value="x" class="btnCustom">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    </div>
+  </section>
+
+  <section class="col-sm ">
+    <img src="{{ url_for('video') }}" alt="Upload video">
+
+  </section>
+
+</body>
+
+</html>
